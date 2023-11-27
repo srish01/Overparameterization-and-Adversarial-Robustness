@@ -1,0 +1,7 @@
+matplotlib
+torch
+torchvision
+numpy
+foolbox
+https://github.com/pralab/secml.git
+pandas
