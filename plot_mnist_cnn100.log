@@ -1,0 +1,179 @@
+INFO:root:***** MNIST - CNN *****
+INFO:root:
+
+		 Analysis for mnist-cnn: attack_success	
+
+INFO:root:--For dataset: mnist, parameter: 760, eps: 0.3
+INFO:root:Total Num of failed attacks: 73
+INFO:root:Total Num of succeeded attacks: 27
+INFO:root:--For dataset: mnist, parameter: 760, eps: 0.9750000000000001
+INFO:root:Total Num of failed attacks: 15
+INFO:root:Total Num of succeeded attacks: 85
+INFO:root:--For dataset: mnist, parameter: 760, eps: 1.6500000000000001
+INFO:root:Total Num of failed attacks: 4
+INFO:root:Total Num of succeeded attacks: 96
+INFO:root:--For dataset: mnist, parameter: 760, eps: 2.325
+INFO:root:Total Num of failed attacks: 0
+INFO:root:Total Num of succeeded attacks: 100
+INFO:root:--For dataset: mnist, parameter: 760, eps: 3.0
+INFO:root:Total Num of failed attacks: 0
+INFO:root:Total Num of succeeded attacks: 100
+INFO:root:--For dataset: mnist, parameter: 1546, eps: 0.3
+INFO:root:Total Num of failed attacks: 73
+INFO:root:Total Num of succeeded attacks: 27
+INFO:root:--For dataset: mnist, parameter: 1546, eps: 0.9750000000000001
+INFO:root:Total Num of failed attacks: 23
+INFO:root:Total Num of succeeded attacks: 77
+INFO:root:--For dataset: mnist, parameter: 1546, eps: 1.6500000000000001
+INFO:root:Total Num of failed attacks: 1
+INFO:root:Total Num of succeeded attacks: 99
+INFO:root:--For dataset: mnist, parameter: 1546, eps: 2.325
+INFO:root:Total Num of failed attacks: 0
+INFO:root:Total Num of succeeded attacks: 100
+INFO:root:--For dataset: mnist, parameter: 1546, eps: 3.0
+INFO:root:Total Num of failed attacks: 0
+INFO:root:Total Num of succeeded attacks: 100
+INFO:root:--For dataset: mnist, parameter: 3226, eps: 0.3
+INFO:root:Total Num of failed attacks: 86
+INFO:root:Total Num of succeeded attacks: 14
+INFO:root:--For dataset: mnist, parameter: 3226, eps: 0.9750000000000001
+INFO:root:Total Num of failed attacks: 30
+INFO:root:Total Num of succeeded attacks: 70
+INFO:root:--For dataset: mnist, parameter: 3226, eps: 1.6500000000000001
+INFO:root:Total Num of failed attacks: 3
+INFO:root:Total Num of succeeded attacks: 97
+INFO:root:--For dataset: mnist, parameter: 3226, eps: 2.325
+INFO:root:Total Num of failed attacks: 0
+INFO:root:Total Num of succeeded attacks: 100
+INFO:root:--For dataset: mnist, parameter: 3226, eps: 3.0
+INFO:root:Total Num of failed attacks: 0
+INFO:root:Total Num of succeeded attacks: 100
+INFO:root:--For dataset: mnist, parameter: 5050, eps: 0.3
+INFO:root:Total Num of failed attacks: 92
+INFO:root:Total Num of succeeded attacks: 8
+INFO:root:--For dataset: mnist, parameter: 5050, eps: 0.9750000000000001
+INFO:root:Total Num of failed attacks: 41
+INFO:root:Total Num of succeeded attacks: 59
+INFO:root:--For dataset: mnist, parameter: 5050, eps: 1.6500000000000001
+INFO:root:Total Num of failed attacks: 5
+INFO:root:Total Num of succeeded attacks: 95
+INFO:root:--For dataset: mnist, parameter: 5050, eps: 2.325
+INFO:root:Total Num of failed attacks: 0
+INFO:root:Total Num of succeeded attacks: 100
+INFO:root:--For dataset: mnist, parameter: 5050, eps: 3.0
+INFO:root:Total Num of failed attacks: 0
+INFO:root:Total Num of succeeded attacks: 100
+INFO:root:--For dataset: mnist, parameter: 7018, eps: 0.3
+INFO:root:Total Num of failed attacks: 89
+INFO:root:Total Num of succeeded attacks: 11
+INFO:root:--For dataset: mnist, parameter: 7018, eps: 0.9750000000000001
+INFO:root:Total Num of failed attacks: 27
+INFO:root:Total Num of succeeded attacks: 73
+INFO:root:--For dataset: mnist, parameter: 7018, eps: 1.6500000000000001
+INFO:root:Total Num of failed attacks: 2
+INFO:root:Total Num of succeeded attacks: 98
+INFO:root:--For dataset: mnist, parameter: 7018, eps: 2.325
+INFO:root:Total Num of failed attacks: 0
+INFO:root:Total Num of succeeded attacks: 100
+INFO:root:--For dataset: mnist, parameter: 7018, eps: 3.0
+INFO:root:Total Num of failed attacks: 0
+INFO:root:Total Num of succeeded attacks: 100
+INFO:root:--For dataset: mnist, parameter: 9130, eps: 0.3
+INFO:root:Total Num of failed attacks: 91
+INFO:root:Total Num of succeeded attacks: 9
+INFO:root:--For dataset: mnist, parameter: 9130, eps: 0.9750000000000001
+INFO:root:Total Num of failed attacks: 41
+INFO:root:Total Num of succeeded attacks: 59
+INFO:root:--For dataset: mnist, parameter: 9130, eps: 1.6500000000000001
+INFO:root:Total Num of failed attacks: 3
+INFO:root:Total Num of succeeded attacks: 97
+INFO:root:--For dataset: mnist, parameter: 9130, eps: 2.325
+INFO:root:Total Num of failed attacks: 0
+INFO:root:Total Num of succeeded attacks: 100
+INFO:root:--For dataset: mnist, parameter: 9130, eps: 3.0
+INFO:root:Total Num of failed attacks: 0
+INFO:root:Total Num of succeeded attacks: 100
+INFO:root:--For dataset: mnist, parameter: 15040, eps: 0.3
+INFO:root:Total Num of failed attacks: 93
+INFO:root:Total Num of succeeded attacks: 7
+INFO:root:--For dataset: mnist, parameter: 15040, eps: 0.9750000000000001
+INFO:root:Total Num of failed attacks: 57
+INFO:root:Total Num of succeeded attacks: 43
+INFO:root:--For dataset: mnist, parameter: 15040, eps: 1.6500000000000001
+INFO:root:Total Num of failed attacks: 6
+INFO:root:Total Num of succeeded attacks: 94
+INFO:root:--For dataset: mnist, parameter: 15040, eps: 2.325
+INFO:root:Total Num of failed attacks: 0
+INFO:root:Total Num of succeeded attacks: 100
+INFO:root:--For dataset: mnist, parameter: 15040, eps: 3.0
+INFO:root:Total Num of failed attacks: 0
+INFO:root:Total Num of succeeded attacks: 100
+INFO:root:--For dataset: mnist, parameter: 21850, eps: 0.3
+INFO:root:Total Num of failed attacks: 96
+INFO:root:Total Num of succeeded attacks: 4
+INFO:root:--For dataset: mnist, parameter: 21850, eps: 0.9750000000000001
+INFO:root:Total Num of failed attacks: 58
+INFO:root:Total Num of succeeded attacks: 42
+INFO:root:--For dataset: mnist, parameter: 21850, eps: 1.6500000000000001
+INFO:root:Total Num of failed attacks: 12
+INFO:root:Total Num of succeeded attacks: 88
+INFO:root:--For dataset: mnist, parameter: 21850, eps: 2.325
+INFO:root:Total Num of failed attacks: 1
+INFO:root:Total Num of succeeded attacks: 99
+INFO:root:--For dataset: mnist, parameter: 21850, eps: 3.0
+INFO:root:Total Num of failed attacks: 0
+INFO:root:Total Num of succeeded attacks: 100
+INFO:root:--For dataset: mnist, parameter: 29560, eps: 0.3
+INFO:root:Total Num of failed attacks: 96
+INFO:root:Total Num of succeeded attacks: 4
+INFO:root:--For dataset: mnist, parameter: 29560, eps: 0.9750000000000001
+INFO:root:Total Num of failed attacks: 68
+INFO:root:Total Num of succeeded attacks: 32
+INFO:root:--For dataset: mnist, parameter: 29560, eps: 1.6500000000000001
+INFO:root:Total Num of failed attacks: 14
+INFO:root:Total Num of succeeded attacks: 86
+INFO:root:--For dataset: mnist, parameter: 29560, eps: 2.325
+INFO:root:Total Num of failed attacks: 2
+INFO:root:Total Num of succeeded attacks: 98
+INFO:root:--For dataset: mnist, parameter: 29560, eps: 3.0
+INFO:root:Total Num of failed attacks: 0
+INFO:root:Total Num of succeeded attacks: 100
+INFO:root:--For dataset: mnist, parameter: 38170, eps: 0.3
+INFO:root:Total Num of failed attacks: 94
+INFO:root:Total Num of succeeded attacks: 6
+INFO:root:--For dataset: mnist, parameter: 38170, eps: 0.9750000000000001
+INFO:root:Total Num of failed attacks: 69
+INFO:root:Total Num of succeeded attacks: 31
+INFO:root:--For dataset: mnist, parameter: 38170, eps: 1.6500000000000001
+INFO:root:Total Num of failed attacks: 17
+INFO:root:Total Num of succeeded attacks: 83
+INFO:root:--For dataset: mnist, parameter: 38170, eps: 2.325
+INFO:root:Total Num of failed attacks: 1
+INFO:root:Total Num of succeeded attacks: 99
+INFO:root:--For dataset: mnist, parameter: 38170, eps: 3.0
+INFO:root:Total Num of failed attacks: 0
+INFO:root:Total Num of succeeded attacks: 100
+INFO:root:
+
+		 Analysis for mnist-cnn: incomplete_optimization	
+
+INFO:root:
+
+		 Analysis for mnist-cnn: unavailable_gradients	
+
+INFO:root:
+
+		 Analysis for mnist-cnn: unstable_predictions	
+
+INFO:root:
+
+		 Analysis for mnist-cnn: silent_success	
+
+INFO:root:
+
+		 Analysis for mnist-cnn: transfer_failure	
+
+INFO:root:
+
+		 Analysis for mnist-cnn: unconstrained_attack_failure	
+

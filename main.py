@@ -8,6 +8,7 @@ from secml.ml import CClassifierPyTorch
 from secml.adv.attacks import CFoolboxPGDL2
 from tinynet import ExpandableCNN_mnist, ExpandableCNN_cifar10, ExpandableCNN2_cifar10, ExpandableFcReLu_mnist, ExpandableFcReLu_cifar10
 from secml.array import CArray
+from secml.data import CDataset
 from performance import plot_performance
 from ioaf import compute_indicators
 import argparse
@@ -101,7 +102,7 @@ def plot_base_performance(clfs, tr_dataset, ts_dataset, ds, network):
                                 savefig= str(PLOT_FOLDER_BASE / f"{ds}_{network}_base_performance_trainsize{tr_dataset.X.shape[0]}"))
     return parameters
 
-def get_ioaf(parameters, clfs, folder_pretrained_model, network, steps, stepsize):
+def get_ioaf(parameters, clfs, ts_dataset, folder_pretrained_model, network, steps, stepsize):
     indicators_clf = {'epsilons': epsilons, 'overparam' : {}}
     if not (folder_pretrained_model / "indicators.pkl").exists():
         for p, clf in zip(parameters, clfs):
@@ -111,6 +112,7 @@ def get_ioaf(parameters, clfs, folder_pretrained_model, network, steps, stepsize
                 indicators_samples = []
                 attack_success = []
                 for i in range(ts_dataset.X.shape[0]):
+                    # print("ts_dataset: ", i)
                     x, y = ts_dataset.X[i, :], ts_dataset.Y[i]
                     indicators = compute_indicators(
                         CFoolboxPGDL2(clf, None, epsilons=eps, abs_stepsize=stepsize, steps=steps, random_start=False), x, y, clf)
@@ -137,6 +139,7 @@ if __name__ == "__main__":
     parser.add_argument('-ds', dest='dataset', choices=['mnist', 'cifar10'], help='Select dataset')
     parser.add_argument('-model', dest='expandable_model', choices=['cnn', 'fcrelu'], help='Select the expandable model')
     parser.add_argument('-train', dest="train_size", choices=['300', '500', '1000', '2000', '3000', '5000', '10000'], help="choose trainind data size")
+    parser.add_argument('-ioaf', dest="ioaf_ts_size", help="give a size that is a sample of the test dataset to compute attacks and indicators", required=False)
     
     args = parser.parse_args()
     ds, network, tr_size = args.dataset, args.expandable_model, int(args.train_size)
@@ -149,20 +152,31 @@ if __name__ == "__main__":
         test_size = config.CIFAR10_TESTSIZE
 
     print(f"\nDATSET: {ds}        MODEL: {network}")
-   
     model_folder, clf_names, nn_module = get_model(ds, network)
-    print("\n[LOG] Loading dataset...")
-
-    # for cifar10
     
+    print("\n[LOG] Loading dataset...")
     tr_dataset, ts_dataset = load_dataset(ds, tr_size, test_size)
+
     print(f"\n[LOG] Pretraining with train size: {tr_size} ...")
     clfs = pretrain(model_folder, clf_names, tr_dataset, nn_module, input_shape, config.OUTCLASSES, config.EPOCH1, config.BATCHSIZE1, lr = config.LR1)
+    
     print("[LOG] Pretraining complete\n[LOG] Plotting base performance")
-
     parameters = plot_base_performance(clfs, tr_dataset, ts_dataset, ds, network)
-    print("[LOG] Computing Indicators of Attack Failures...")
-    get_ioaf(parameters, clfs, model_folder, network, config.STEPS, config.STEPSIZE)
+
+    if args.ioaf_ts_size:
+        ioaf_ts_size = int(args.ioaf_ts_size)
+        if ds == "mnist":
+            ioaf_test = ts_dataset[:ioaf_ts_size, :]
+        elif ds == "cifar10":
+            ioaf_test_x, ioaf_test_y = ts_dataset.X[:ioaf_ts_size, :], ts_dataset.Y[:ioaf_ts_size]
+            ioaf_test = CDataset(ioaf_test_x, ioaf_test_y)
+        
+        print(f"[LOG] Computing Indicators of Attack Failures on test data of size: {ioaf_test.X.shape[0]}...")
+        get_ioaf(parameters, clfs, ioaf_test, model_folder, network, config.STEPS, config.STEPSIZE)
+
+    
+    print(f"[LOG] Computing Indicators of Attack Failures on test data of size: {ts_dataset.X.shape[0]}...")
+    get_ioaf(parameters, clfs, ts_dataset, model_folder, network, config.STEPS, config.STEPSIZE)
 
 
 # cifar10-cnn:      batch: 16, epoch: 50, lr: 1e-3, train: variable, test: 10000, hidden: 2: 
